@@ -70,13 +70,13 @@ class VendingMachineTest < Minitest::Test
     #showing a few ways of how to test for this
     assert_equal ({1=>[snack1], 4=>[snack2, snack3]}), vm.how_many_snacks
     # play around with what is happening below
-    p vm.how_many_snacks
+    # p vm.how_many_snacks
     assert_equal "Snickers", vm.how_many_snacks[4][0].name
     assert_equal "Burrito", vm.how_many_snacks[4][1].name
   end
 
   def test_can_collect_all_items_by_first_letter_of_alph
-    skip
+    # skip
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
@@ -92,7 +92,7 @@ class VendingMachineTest < Minitest::Test
   end
 
   def test_total_number_of_items_in_vending_machine
-    skip
+    # skip
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
@@ -101,12 +101,12 @@ class VendingMachineTest < Minitest::Test
     vm.add_snack(snack1)
     vm.add_snack(snack2)
     vm.add_snack(snack3)
-
+    
     assert_equal 7, vm.total_num_items
   end
 
   def test_can_create_string_with_first_letter_of_name
-    skip
+    # skip
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
