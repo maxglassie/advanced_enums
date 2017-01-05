@@ -12,7 +12,16 @@ class VendingMachine
   end
 
   def snacks_by_name
-    @inventory.
+    @inventory.map do |snack|
+      snack.name
+    end
+  end
+
+  def how_many_snacks
+    #returns a hash 
+    @inventory.group_by do |snack|
+      snack.quantity
+    end
   end
 
 end #class end
