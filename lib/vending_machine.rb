@@ -1,7 +1,7 @@
 require './lib/snack'
 
 class VendingMachine
-  attr_accessor :inventory
+  attr_reader :inventory
 
   def initialize
     @inventory = []
@@ -39,7 +39,17 @@ class VendingMachine
   end
 
   def first_letters
-    
+    string = ""
+    @inventory.each do |snack|
+      string = string + snack.name[0]
+    end
+    string
+  end
+
+  def change_indexes
+    #returns an array with the index numbers, now changed
+    @inventory.each do |snack|
+    end
   end
 
 end #class end
